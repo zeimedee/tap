@@ -48,3 +48,10 @@ func (l *TapHandler) Tap(ctx *gin.Context) {
 	}
 	ctx.JSON(http.StatusOK, gin.H{"status": "sent"})
 }
+
+func (l *TapHandler) GetAll(ctx *gin.Context) {
+	ids := l.TapService.GetAll()
+
+	ctx.JSON(http.StatusOK, gin.H{"data": ids})
+
+}

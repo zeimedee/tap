@@ -17,6 +17,7 @@ func SetUpRoutes() *gin.Engine {
 		api.GET("/healthcheck", handlers.Healthcheck)
 		api.POST("/register", tapHandler.Register)
 		api.GET("/tap/:id", tapHandler.Tap)
+		api.GET("/all", tapHandler.GetAll)
 	}
 
 	return router

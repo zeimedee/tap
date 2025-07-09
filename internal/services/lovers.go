@@ -34,3 +34,7 @@ func (ws *LoversService) GetToken(id string) (string, error) {
 	}
 	return token, nil
 }
+
+func (ws *LoversService) GetAll() map[string]string {
+	return ws.ids
+}
