@@ -13,7 +13,7 @@ import (
 func SendPushNotifs(token string) error {
 	ctx := context.Background()
 
-	opt := option.WithCredentialsFile("internal/services/awesomenotif.json")
+	opt := option.WithCredentialsFile("etc/secrets/awesomenotif.json")
 
 	app, err := firebase.NewApp(ctx, nil, opt)
 	if err != nil {
